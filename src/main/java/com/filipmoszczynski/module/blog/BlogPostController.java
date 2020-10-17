@@ -28,7 +28,7 @@ public class BlogPostController {
     public String createPost(PostForm postForm) {
         PostDto postDto = postMemoryStorageService.create(postForm.getTitle(),
                 postForm.getText());
-        return "redirect:blog/posts/" + postDto.getUuid();
+        return "redirect:/blog/posts/" + postDto.getUuid();
     }
 
     @RequestMapping(path = "/blog/posts/{uuid}", method = RequestMethod.GET) // {to jest zmienna}

@@ -3,7 +3,7 @@ package com.filipmoszczynski.module.books;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "books") //acceptable
+@Table(name = "books") //acceptable error
 public class BooksEntity {
 
     @Id

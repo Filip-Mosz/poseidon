@@ -19,9 +19,9 @@ public class BlogPostController {
         return "redirect:blog/posts/" + "0-1-2-3";
     }
 
-    @RequestMapping(path = "/blog/posts{uuid}", method = RequestMethod.GET)
-    public String getPost(@PathVariable("uuid") String uuid, Model model) {
+    @RequestMapping(path = "/blog/posts/{uuid}", method = RequestMethod.GET) // {to jest zmienna}
+    public String getPost(@PathVariable("uuid") String uuid, Model model) { //pathVariable podstawia wartość zmiennej do scieżki
         model.addAttribute("post", uuid);
-        return "blog/posts";
+        return "blog/post";
     }
 }

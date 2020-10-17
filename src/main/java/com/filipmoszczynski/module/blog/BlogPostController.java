@@ -30,7 +30,7 @@ public class BlogPostController {
 
     @RequestMapping(path = "/blog/posts/{uuid}", method = RequestMethod.GET) // {to jest zmienna}
     public String getPost(@PathVariable("uuid") String uuid, Model model) { // pathVariable podstawia wartość zmiennej do scieżki
-        model.addAttribute("posts", postMemoryStorageService.getPost(uuid).get());
+        model.addAttribute("post", postMemoryStorageService.getPost(uuid).get()); //nie ma obsługi błędów, na razie tak ma być
         return "blog/post";
     }
 }

@@ -12,8 +12,10 @@ import java.util.Optional;
 public class PostMemoryStorageService { //udaje bazę danych
     private static final List<PostDto> STORAGE = new ArrayList<>();
     static {
-        STORAGE.add(new PostDto("1", "Lorem ipsum..........", "Lorem..."));
-    }
+            STORAGE.add(new PostDto("1", "Lorem ipsum dolor 1", "Lorem ..."));
+            STORAGE.add(new PostDto( "Lorem ipsum dolor 2", "Lorem ..."));
+            STORAGE.add(new PostDto( "Lorem ipsum dolor 3", "Lorem ..."));
+        }
 
     public Optional<PostDto> getPost(String uuid){
         return STORAGE

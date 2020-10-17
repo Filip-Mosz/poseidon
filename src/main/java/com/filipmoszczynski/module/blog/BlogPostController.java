@@ -20,7 +20,7 @@ public class BlogPostController {
     }
 
     @RequestMapping(path = "/blog/posts/{uuid}", method = RequestMethod.GET) // {to jest zmienna}
-    public String getPost(@PathVariable("uuid") String uuid, Model model) { //pathVariable podstawia wartość zmiennej do scieżki
+    public String getPost(@PathVariable("uuid") String uuid, Model model) { // pathVariable podstawia wartość zmiennej do scieżki
         model.addAttribute("post", uuid);
         return "blog/post";
     }

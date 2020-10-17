@@ -1,4 +1,4 @@
-package com.filipmoszczynski.poseidon;
+package com.filipmoszczynski;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
